@@ -54,11 +54,13 @@ app.get('/api/movies/:id', async (req, res) => {
     res.send(movie);
 });
 
+// This GET request fetches a specific movie by its ID.
 app.get('/api/movie/:id', async (req, res) => {
     let movie = await Movie.findById({ _id: req.params.id });
     res.send(movie);
 });
 
+// This PUT request updates a specific movie’s information.
 app.put('/api/movie/:id', async (req, res) => {
     let movie = await Movie.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.send(movie);

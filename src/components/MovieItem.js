@@ -10,6 +10,7 @@ function MovieItem(props) {
     }, [props.myMovie]); // Only run this effect when the mymovie prop changes
     // Returns a Bootstrap Cards with the movie title as the header, 
     // the poster image in the body, and the year at the footer.
+    // "Edit" button added to each movie item. Used to navigate to edit page for specific movie
     return (
         <div>
             <Card>

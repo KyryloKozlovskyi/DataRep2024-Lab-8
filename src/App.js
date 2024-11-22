@@ -12,7 +12,8 @@ import Edit from './components/Edit';
 function App() {
   // Main page. Client side routing.
   // Navigates between different pages. 
-  // home -> Content component, read -> Read component, create -> Create component                                     
+  // home -> Content component, read -> Read component, create -> Create component    
+  // Edit path added for editing movie data                               
   return (
     <Router>
       <NavigationBar />
