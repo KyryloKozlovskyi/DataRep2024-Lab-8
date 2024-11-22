@@ -54,6 +54,16 @@ app.get('/api/movies/:id', async (req, res) => {
     res.send(movie);
 });
 
+app.get('/api/movie/:id', async (req, res) => {
+    let movie = await Movie.findById({ _id: req.params.id });
+    res.send(movie);
+});
+
+app.put('/api/movie/:id', async (req, res) => {
+    let movie = await Movie.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.send(movie);
+});
+
 // Port listener
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`); // Log to the console
