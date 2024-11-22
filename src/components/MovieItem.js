@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from "react";
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 // Logs new movie data to the console
 function MovieItem(props) {
@@ -18,6 +19,7 @@ function MovieItem(props) {
                         <img src={props.myMovie.poster} alt={props.myMovie.title} />
                         <footer>{props.myMovie.year}</footer>
                     </blockquote>
+                    <Link to={"/edit/" + props.myMovie._id} className="btn btn-primary">Edit</Link>
                 </Card.Body>
             </Card>
         </div>
