@@ -7,6 +7,8 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import Read from './components/Read';
 import Create from './components/Create';
+import Edit from './components/Edit';
+
 function App() {
   // Main page. Client side routing.
   // Navigates between different pages. 
@@ -18,6 +20,7 @@ function App() {
         <Route path="/home" element={<Content />} />
         <Route path="/read" element={<Read />} />
         <Route path="/create" element={<Create />} />
+        <Route path='/edit/:id' element={<Edit />} />
       </Routes>
       <Footer />
     </Router>
